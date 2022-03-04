@@ -1,0 +1,24 @@
+.layout{
+    width: 100%;
+    height: auto;
+
+    display: flex;
+    flex-direction: row;
+    align-items:flex-start;
+    justify-content: space-between;
+    box-sizing: none;
+}
+
+/* .layout Sidebar{
+    width: 18%;
+} */
+
+/* .sidebarmain{
+    width: 20%;
+} */
+
+.layout main{
+    width: 80%;
+    padding: 15px;
+    box-sizing: none;
+}

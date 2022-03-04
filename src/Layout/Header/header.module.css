@@ -1,0 +1,76 @@
+header {
+    width: 100%;
+    margin: 0;
+    padding: 17px 33px;
+    box-sizing: border-box;
+
+    background-color: #f9f6f4;
+
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logoBox {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.logoImg {
+    width: 222px;
+}
+
+.inputBox {
+    width: 417px;
+    background-color: #ede6e6;
+    height: auto;
+    padding: 10px 10px;
+
+    border-radius: 12px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+
+    justify-content: space-between;
+}
+
+.inputBox input {
+    width: 85%;
+    background-color: #ede6e6;
+    border: none;
+    font-size: 16px;
+
+    font-style: italic;
+    font-weight: normal;
+    color: #1e0d03;
+    opacity: 0.3;
+
+    line-height: 20px;
+}
+
+.inputBox input:focus {
+    outline: none;
+}
+
+.inputBox svg {
+    color: #1e0d03;
+    font-size: 24px;
+}
+
+.notice {
+    width: 144px;
+    height: 48px;
+
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.notice svg{
+    color: #1e0d03;
+    font-size: 20px;
+}
