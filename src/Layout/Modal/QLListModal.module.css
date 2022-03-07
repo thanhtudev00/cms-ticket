@@ -1,0 +1,146 @@
+.listModalBox {
+    width: 634px;
+    height: 454px;
+    background-color: #ffffff;
+    border-radius: 16px;
+
+    padding: 16px;
+    position: absolute;
+    top: 10%;
+    left: 30%;
+    z-index: 100;
+
+    box-shadow: inset 0 -3em 3em rgba(0, 0, 0, 0.1), 0 0 0 2px rgb(255, 255, 255), 0.3em 0.3em 1em rgba(0, 0, 0, 0.3);
+}
+
+.listModalBox h1 {
+    font-style: normal;
+    font-weight: bold;
+    font-size: 24px;
+    line-height: 30px;
+
+    color: #1e0d03;
+    width: 100%;
+    text-align: center;
+}
+
+.listModalDate {
+    width: 100%;
+
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.listModalDate div {
+    width: 50%;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+.listModalDate div span {
+    font-style: normal;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 26px;
+
+    color: #1e0d03;
+    opacity: 0.7;
+}
+
+.listModalDate div input {
+    width: 180px;
+    padding: 8px 12px;
+    border: solid 1px #a5a8b1;
+    border-radius: 8px;
+
+    margin-left: 20px;
+    margin-top: 10px;
+}
+
+.listModalItemBox {
+    width: 100%;
+}
+.listModalItemBox p {
+    font-style: normal;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 26px;
+
+    color: #1e0d03;
+    opacity: 0.8;
+    margin-top: 20px;
+}
+
+.listModalItemBox div {
+    width: 100%;
+    margin-top: 10px;
+
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.listModalItemBox div div {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.listModalItemBox div div input[type="radio"] {
+    width: 24px;
+    height: 24px;
+    background-color: #27aef9;
+    margin-right: 5px;
+}
+
+.listModalItemBox div div input[type="checkbox"] {
+    width: 24px;
+    height: 24px;
+    background-color: #27aef9;
+    margin-right: 5px;
+}
+
+.listModalItemBox div div span {
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 20px;
+
+    color: #1e0d03;
+    opacity: 0.7;
+}
+
+.filterBtn {
+    width: 100%;
+    margin-top: 20px;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.filterBtn button {
+    padding: 11px 54px;
+    border: solid 1px #ff993c;
+    border-radius: 8px;
+    color: #ff993c;
+
+    font-style: normal;
+    font-weight: bold;
+    font-size: 18px;
+    line-height: 26px;
+}
+
+.filterBtn button:focus {
+    outline: none;
+}
+.filterBtn button:hover {
+    background-color: #ff993c;
+    color: #f7f7f8;
+}

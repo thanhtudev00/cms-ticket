@@ -41,7 +41,7 @@ const Sidebar = () => {
     ];
 
     return (
-        <nav className={classes.nav}>
+        <div className={classes.navbar}>
             <ul>
                 {data.map((item) => (
                     <li key={item.title}>
@@ -52,7 +52,7 @@ const Sidebar = () => {
                     </li>
                 ))}
             </ul>
-        </nav>
+        </div>
     );
 };
 

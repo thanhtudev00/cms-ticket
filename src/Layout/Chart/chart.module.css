@@ -1,5 +1,8 @@
 .chart {
     width: 100%;
+    padding: 16px;
+    background-color: #ffffff;
+    border-radius: 20px;
 }
 
 .chartTitle {

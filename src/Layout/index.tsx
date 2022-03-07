@@ -6,17 +6,21 @@ import classes from './layout.module.css';
 
 
 
-const Layout = (props: any) => {
+const Layout = ({ children }: any) => {
 
     return (
         <Fragment>
             <Header />
-            <div className={classes.layout}>
-                <div className={classes.sidebarmain}>
-                    <Sidebar />
-
+            <div className="container-fluid">
+                <div className="row content">
+                    <div className=" p-0" style={{width: '17%'}}>
+                        <Sidebar />
+                    </div>
+                    {/* <div className="p-3" style={{width: '83%', backgroundColor: '#ffffff', borderRadius: '20px'}}> */}
+                    <div className="p-0" style={{width: '83%',}}>
+                        {children}
+                    </div>
                 </div>
-                <main>{props.children}</main>
             </div>
         </Fragment>
     );
