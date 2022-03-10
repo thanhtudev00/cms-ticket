@@ -69,7 +69,7 @@ const QLListModal = (props: any) => {
                 </div>
             </div>
             <div className={classes.filterBtn}>
-                <button onClick={props.onHiden}>Lọc</button>
+                <button onClick={props.onHide}>Lọc</button>
             </div>
         </div>
     );

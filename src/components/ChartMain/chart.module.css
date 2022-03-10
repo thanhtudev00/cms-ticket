@@ -36,14 +36,11 @@
     color: #1e0d03;
 }
 
-.chartCL {
-    border: solid #e6e0e0 1px;
-    border-radius: 6px;
-
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-between;
+.chartCL input {
+    width: 170px;
+    padding: 9px 12px;
+    border-radius: 8px;
+    border: solid #c7c7c7;
 }
 
 .chartCL p {

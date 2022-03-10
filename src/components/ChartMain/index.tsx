@@ -1,6 +1,7 @@
 import classes from './chart.module.css';
-import ChartArea from './ChartArea';
+import ChartArea from '../AreChart/ChartArea';
 import { AiOutlineCalendar } from 'react-icons/ai';
+// import ChartPie from './ChartPie';
 
 
 const Chart = () => {
@@ -12,13 +13,15 @@ const Chart = () => {
                 <div className={classes.chartDT}>
                     <p>Doanh thu</p>
                     <div className={classes.chartCL} >
-                        <p>Tháng 4, 2021</p>
-                        <AiOutlineCalendar />
+                        <input type="date" />
                     </div>
                 </div>
             </div>
             <div>
                 <ChartArea />
+            </div>
+            <div>
+                {/* <ChartPie /> */}
             </div>
         </div>
 

@@ -1,15 +1,10 @@
-/* .ListBoxMain{
-    padding: 5px 5px;
-    bo
-} */
-
-.listTitle {
+.dsListTitle {
     width: 100%;
     margin-bottom: 20px;
     padding: 0;
 }
 
-.listTitle h1 {
+.dsListTitle h1 {
     font-style: normal;
     font-weight: bold;
     font-size: 36px;
@@ -18,7 +13,7 @@
     color: #1e0d03;
 }
 
-.listAc {
+.dsListAc {
     width: 100%;
     margin: 0;
     padding: 0;
@@ -29,7 +24,7 @@
     justify-content: space-between;
 }
 
-.listInput {
+.dsListInput {
     width: 446px;
     background-color: #f7f7f8;
     border-radius: 8px;
@@ -41,7 +36,7 @@
     justify-content: space-between;
 }
 
-.listInput input {
+.dsListInput input {
     width: 80%;
     background-color: #f7f7f8;
     border: none;
@@ -55,37 +50,29 @@
     opacity: 0.3;
 }
 
-.listInput input:focus {
+.dsListInput input:focus {
     outline: none;
 }
 
-.listFilter {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: flex-end;
-}
-
-.listFilter button {
+.dsListBtn button {
     padding: 11px 24px;
-    border: solid 1px #ff993c;
     border-radius: 6px;
-    color: #ff993c;
+    color: #ffffff;
+    background-color: #ff993c;
+
+    border: none;
 
     font-style: normal;
     font-weight: bold;
     font-size: 18px;
     line-height: 26px;
-
-    background-color: #f7f7f8;
-    margin-left: 10px;
 }
 
-.listFilter button:focus{
+.dsListBtn button:focus {
     outline: none;
 }
 
-.listFilter button:hover{
-    background-color: #ff993c;
-    color: #f7f7f8;
+.dsListBtn button:hover {
+    background-color: #f7f7f8;
+    color: #ff993c;
 }

@@ -24,19 +24,14 @@ const Sidebar = () => {
             icon: <FaFileInvoiceDollar />,
         },
         {
-            title: 'Danh sách sự kiện',
-            path: '/dssukien',
-            icon: <AiOutlineUnorderedList />,
-        },
-        {
-            title: 'Quản lý thiết bị',
-            path: '/quanlythietbi',
-            icon: <FiMonitor />,
-        },
-        {
             title: 'Cài đặt',
             path: '/caidat',
             icon: <AiOutlineSetting />,
+        },
+        {
+            title: 'Gói dịch vụ',
+            path: './goidichvu',
+            icon: ''
         },
     ];
 
