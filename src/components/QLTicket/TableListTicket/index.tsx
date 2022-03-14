@@ -44,6 +44,42 @@ const TableListTicket = () => {
                     <td>10/12/2022</td>
                     <td>Cổng 1</td>
                 </tr>
+                <tr>
+                    <th scope="row">4</th>
+                    <td>AHGSFH</td>
+                    <td>123456789</td>
+                    <td>Đã sử dụng</td>
+                    <td>14/12/2022</td>
+                    <td>10/12/2022</td>
+                    <td>Cổng 1</td>
+                </tr>
+                <tr>
+                    <th scope="row">5</th>
+                    <td>AHGSFH</td>
+                    <td>123456789</td>
+                    <td>Đã sử dụng</td>
+                    <td>14/12/2022</td>
+                    <td>10/12/2022</td>
+                    <td>Cổng 1</td>
+                </tr>
+                <tr>
+                    <th scope="row">6</th>
+                    <td>AHGSFH</td>
+                    <td>123456789</td>
+                    <td>Đã sử dụng</td>
+                    <td>14/12/2022</td>
+                    <td>10/12/2022</td>
+                    <td>Cổng 1</td>
+                </tr>
+                <tr>
+                    <th scope="row">7</th>
+                    <td>AHGSFH</td>
+                    <td>123456789</td>
+                    <td>Đã sử dụng</td>
+                    <td>14/12/2022</td>
+                    <td>10/12/2022</td>
+                    <td>Cổng 1</td>
+                </tr>
             </tbody>
         </table>
     );

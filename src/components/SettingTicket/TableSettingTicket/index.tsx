@@ -60,6 +60,76 @@ const TableSettingTicket: React.FC = () => {
                             <span>Cập nhập</span>
                         </td>
                     </tr>
+                    <tr>
+                        <th scope="row">4</th>
+                        <td>AHGSFH</td>
+                        <td>Gói gia đình</td>
+                        <td>10/12/2022</td>
+                        <td>14/12/2022</td>
+                        <td>90.000VNĐ</td>
+                        <td>360.000VNĐ</td>
+                        <td>Đang áp dụng</td>
+                        <td>
+                            <FaRegEdit style={{ color: '#FF993C' }} />
+                            <span>Cập nhập</span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th scope="row">5</th>
+                        <td>AHGSFH</td>
+                        <td>Gói gia đình</td>
+                        <td>10/12/2022</td>
+                        <td>14/12/2022</td>
+                        <td>90.000VNĐ</td>
+                        <td>360.000VNĐ</td>
+                        <td>Đang áp dụng</td>
+                        <td>
+                            <FaRegEdit style={{ color: '#FF993C' }} />
+                            <span>Cập nhập</span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th scope="row">6</th>
+                        <td>AHGSFH</td>
+                        <td>Gói gia đình</td>
+                        <td>10/12/2022</td>
+                        <td>14/12/2022</td>
+                        <td>90.000VNĐ</td>
+                        <td>360.000VNĐ</td>
+                        <td>Đang áp dụng</td>
+                        <td>
+                            <FaRegEdit style={{ color: '#FF993C' }} />
+                            <span>Cập nhập</span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th scope="row">7</th>
+                        <td>AHGSFH</td>
+                        <td>Gói gia đình</td>
+                        <td>10/12/2022</td>
+                        <td>14/12/2022</td>
+                        <td>90.000VNĐ</td>
+                        <td>360.000VNĐ</td>
+                        <td>Đang áp dụng</td>
+                        <td>
+                            <FaRegEdit style={{ color: '#FF993C' }} />
+                            <span>Cập nhập</span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th scope="row">8</th>
+                        <td>AHGSFH</td>
+                        <td>Gói gia đình</td>
+                        <td>10/12/2022</td>
+                        <td>14/12/2022</td>
+                        <td>90.000VNĐ</td>
+                        <td>360.000VNĐ</td>
+                        <td>Đang áp dụng</td>
+                        <td>
+                            <FaRegEdit style={{ color: '#FF993C' }} />
+                            <span>Cập nhập</span>
+                        </td>
+                    </tr>
                 </tbody>
             </table>
         </div>
