@@ -21,7 +21,7 @@ const QLTicket: React.FC = (props: any) => {
     return (
         <div className={classes.QLListTicket} >
             {showModal ? <QLListModal onHide={hideModalHandler} /> : ''}
-            <QLListHeader />
+            <QLListHeader onShow={showModalHandler} />
             <TableListTicket />
         </div>
     );

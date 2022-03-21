@@ -3,7 +3,7 @@ import { AiOutlineSearch } from 'react-icons/ai';
 import { BiFilterAlt } from 'react-icons/bi';
 import React from 'react';
 
-const QLListHeader: React.FC = (props:any) => {
+const QLListHeader = (props:any) => {
 
     return (
         <div className={classes.listTitle}>

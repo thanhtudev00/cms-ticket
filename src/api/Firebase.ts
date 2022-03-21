@@ -24,6 +24,29 @@ const taskStore = store.collection('tickets');
 
 console.log(taskStore);
 
+// connect tikets
+
+const api = {
+    fetchAll: <T>(): Promise<T[] | firebase.firestore.DocumentData[] | undefined> => {
+        const data = taskStore.get().then((snapshot: firebase.firestore.QuerySnapshot<firebase.firestore.DocumentData | T>) => {
+            return snapshot.docs.map((doc) => ({ id: doc.id, ...doc.data() }))
+        })
+        return data
+    },
+    fetchOne: <T>(id: string): Promise<T | firebase.firestore.DocumentData | undefined> => {
+        const data = taskStore.doc(id).get().then((doc) => {
+            return doc.data()
+        })
+        console.log("task with id: ", data)
+        return data
+    },
+}
+
+console.log(api.fetchAll);
+
+export default api;
+
+
 // Initialize Firebase
 const app = initializeApp(firebaseConfig);
 const analytics = getAnalytics(app);

@@ -2,7 +2,7 @@ import classes from './sidebar.module.css';
 // import {Link} from 'react-router-dom';
 import { BiHomeAlt } from "react-icons/bi";
 import { FiMonitor } from "react-icons/fi";
-import { AiOutlineUnorderedList, AiOutlineSetting } from "react-icons/ai";
+import { AiOutlineUnorderedList, AiOutlineSetting,  } from "react-icons/ai";
 import { FaTicketAlt, FaFileInvoiceDollar } from "react-icons/fa";
 import { Link } from 'react-router-dom';
 
@@ -22,6 +22,11 @@ const Sidebar = () => {
             title: 'Đối soát vé',
             path: '/doisoatve',
             icon: <FaFileInvoiceDollar />,
+        },
+        {
+            title: 'Danh sách vé',
+            path: './danhsachve',
+            icon: <AiOutlineUnorderedList/>
         },
         {
             title: 'Cài đặt',
