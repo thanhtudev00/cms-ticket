@@ -1,8 +1,41 @@
+import { useEffect, useState } from 'react';
 import { FaRegEdit } from 'react-icons/fa';
+import firebase, { test2 } from "../../../api/Firebase";
+import { ComboTicket } from '../../../store/contant/TicketType';
+import UpdateTicketModal from '../../Modal/UpdateTicketModal';
 
-const TableSettingTicket: React.FC = () => {
+const TableSettingTicket = (props: any) => {
+    const [cbTicket, setCbTicket] = useState<ComboTicket[] | null>(null);
+    const [isUpdateModal, setIsUpdateModal] = useState(false);
+
+    const showUpdate = () => {
+        setIsUpdateModal(true);
+    };
+
+    const hideUpdate = () => {
+        setIsUpdateModal(false);
+    };
+
+    useEffect(() => {
+        const getCbTickets = async () => {
+            await test2.get().then(
+                (snapshot: firebase.firestore.QuerySnapshot<firebase.firestore.DocumentData>) => {
+                    const data = snapshot.docs.map((doc) => ({ ...doc.data() }));
+                    const comboList = data as ComboTicket[];
+                    setCbTicket(comboList);
+                }
+            );
+        };
+        getCbTickets();
+    }, []);
+
+    if (cbTicket) {
+        console.log(cbTicket.map(item => item));
+    }
+
     return (
         <div className="mt-3">
+            {isUpdateModal && <UpdateTicketModal onCacel={hideUpdate} />}
             <table className="table table-striped">
                 <thead>
                     <tr>
@@ -17,120 +50,26 @@ const TableSettingTicket: React.FC = () => {
                         <th scope="col"></th>
                     </tr>
                 </thead>
-                <tbody>
-                    <tr>
-                        <th scope="row">1</th>
-                        <td>AHGSFH</td>
-                        <td>Gói gia đình</td>
-                        <td>10/12/2022</td>
-                        <td>14/12/2022</td>
-                        <td>90.000VNĐ</td>
-                        <td>360.000VNĐ</td>
-                        <td>Đang áp dụng</td>
-                        <td>
-                            <FaRegEdit style={{ color: '#FF993C' }} />
-                            <span>Cập nhập</span>
-                        </td>
-                    </tr>
-                    <tr>
-                        <th scope="row">2</th>
-                        <td>AHGSFH</td>
-                        <td>Gói gia đình</td>
-                        <td>10/12/2022</td>
-                        <td>14/12/2022</td>
-                        <td>90.000VNĐ</td>
-                        <td>360.000VNĐ</td>
-                        <td>Đang áp dụng</td>
-                        <td>
-                            <FaRegEdit style={{ color: '#FF993C' }} />
-                            <span>Cập nhập</span>
-                        </td>
-                    </tr>
-                    <tr>
-                        <th scope="row">3</th>
-                        <td>AHGSFH</td>
-                        <td>Gói gia đình</td>
-                        <td>10/12/2022</td>
-                        <td>14/12/2022</td>
-                        <td>90.000VNĐ</td>
-                        <td>360.000VNĐ</td>
-                        <td>Đang áp dụng</td>
-                        <td>
-                            <FaRegEdit style={{ color: '#FF993C' }} />
-                            <span>Cập nhập</span>
-                        </td>
-                    </tr>
-                    <tr>
-                        <th scope="row">4</th>
-                        <td>AHGSFH</td>
-                        <td>Gói gia đình</td>
-                        <td>10/12/2022</td>
-                        <td>14/12/2022</td>
-                        <td>90.000VNĐ</td>
-                        <td>360.000VNĐ</td>
-                        <td>Đang áp dụng</td>
-                        <td>
-                            <FaRegEdit style={{ color: '#FF993C' }} />
-                            <span>Cập nhập</span>
-                        </td>
-                    </tr>
-                    <tr>
-                        <th scope="row">5</th>
-                        <td>AHGSFH</td>
-                        <td>Gói gia đình</td>
-                        <td>10/12/2022</td>
-                        <td>14/12/2022</td>
-                        <td>90.000VNĐ</td>
-                        <td>360.000VNĐ</td>
-                        <td>Đang áp dụng</td>
-                        <td>
-                            <FaRegEdit style={{ color: '#FF993C' }} />
-                            <span>Cập nhập</span>
-                        </td>
-                    </tr>
-                    <tr>
-                        <th scope="row">6</th>
-                        <td>AHGSFH</td>
-                        <td>Gói gia đình</td>
-                        <td>10/12/2022</td>
-                        <td>14/12/2022</td>
-                        <td>90.000VNĐ</td>
-                        <td>360.000VNĐ</td>
-                        <td>Đang áp dụng</td>
-                        <td>
-                            <FaRegEdit style={{ color: '#FF993C' }} />
-                            <span>Cập nhập</span>
-                        </td>
-                    </tr>
-                    <tr>
-                        <th scope="row">7</th>
-                        <td>AHGSFH</td>
-                        <td>Gói gia đình</td>
-                        <td>10/12/2022</td>
-                        <td>14/12/2022</td>
-                        <td>90.000VNĐ</td>
-                        <td>360.000VNĐ</td>
-                        <td>Đang áp dụng</td>
-                        <td>
-                            <FaRegEdit style={{ color: '#FF993C' }} />
-                            <span>Cập nhập</span>
-                        </td>
-                    </tr>
-                    <tr>
-                        <th scope="row">8</th>
-                        <td>AHGSFH</td>
-                        <td>Gói gia đình</td>
-                        <td>10/12/2022</td>
-                        <td>14/12/2022</td>
-                        <td>90.000VNĐ</td>
-                        <td>360.000VNĐ</td>
-                        <td>Đang áp dụng</td>
-                        <td>
-                            <FaRegEdit style={{ color: '#FF993C' }} />
-                            <span>Cập nhập</span>
-                        </td>
-                    </tr>
-                </tbody>
+                {
+                    cbTicket?.map((item, index) => (
+                        <tbody key={index}>
+                            <tr>
+                                <th scope="row">{index}</th>
+                                <td>{item.codeCB}</td>
+                                <td>{item.nameCB}</td>
+                                <td>{item.inDateCB}</td>
+                                <td>{item.outDateCB}</td>
+                                <td>{item.priceTicket}</td>
+                                <td>{item.priceCB}</td>
+                                <td>{item.statusCB}</td>
+                                <td onClick={showUpdate} style={{ color: '#FF993C' }}>
+                                    <FaRegEdit  style={{ color: '#FF993C' }} />
+                                    <span>Cập nhập</span>
+                                </td>
+                            </tr>
+                        </tbody>
+                    ))
+                }
             </table>
         </div>
     );

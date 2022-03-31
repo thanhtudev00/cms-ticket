@@ -13,7 +13,7 @@ const Chart = () => {
                 <div className={classes.chartDT}>
                     <p>Doanh thu</p>
                     <div className={classes.chartCL} >
-                        <input type="date" />
+                        <input style={{ color: '#FF993C'}} type="date" />
                     </div>
                 </div>
             </div>

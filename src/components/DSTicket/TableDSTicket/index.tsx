@@ -1,5 +1,37 @@
 
-const TableDSTicket: React.FC = () => { 
+import firebase, { test } from "../../../api/Firebase";
+// import {
+//     collection,
+//     getDocs,
+//     doc,
+// } from 'firebase/firestore';
+import { useEffect, useState } from "react";
+import { Ticket } from "../../../store/contant/TicketType";
+
+const TableDSTicket = (props: any) => {
+
+    const [ticketList, setTicketList] = useState<Ticket[] | null>(null);
+    // const ticketListCollectionRef = collection(db, "tickets");
+
+
+    useEffect(() => {
+        const getTickets = async () => {
+            await test.get().then(
+                (snapshot: firebase.firestore.QuerySnapshot<firebase.firestore.DocumentData>) => {
+                    const data = snapshot.docs.map((doc) => ({ ...doc.data() }))
+                    const ticketList = data as Ticket[]
+                    setTicketList(ticketList)
+                }
+            );
+
+
+        };
+        getTickets();
+    }, []);
+    if (ticketList) {
+
+        console.log(ticketList.map(item => item))
+    }
 
     return (
         <table className="table table-striped">
@@ -13,72 +45,25 @@ const TableDSTicket: React.FC = () => {
                     <th scope="col"></th>
                 </tr>
             </thead>
-            <tbody>
-                <tr>
-                    <th scope="row">1</th>
-                    <td>123456789</td>
-                    <td>14/12/2022</td>
-                    <td>Vé cổng</td>
-                    <td>Cổng 1</td>
-                    <td>Chưa đối soát</td>
-                </tr>
-                <tr>
-                    <th scope="row">2</th>
-                    <td>123456789</td>
-                    <td>14/12/2022</td>
-                    <td>Vé cổng</td>
-                    <td>Cổng 1</td>
-                    <td>Chưa đối soát</td>
-                </tr>
-                <tr>
-                    <th scope="row">3</th>
-                    <td>123456789</td>
-                    <td>14/12/2022</td>
-                    <td>Vé cổng</td>
-                    <td>Cổng 1</td>
-                    <td>Chưa đối soát</td>
-                </tr>
-                <tr>
-                    <th scope="row">4</th>
-                    <td>123456789</td>
-                    <td>14/12/2022</td>
-                    <td>Vé cổng</td>
-                    <td>Cổng 1</td>
-                    <td>Chưa đối soát</td>
-                </tr>
-                <tr>
-                    <th scope="row">5</th>
-                    <td>123456789</td>
-                    <td>14/12/2022</td>
-                    <td>Vé cổng</td>
-                    <td>Cổng 1</td>
-                    <td>Chưa đối soát</td>
-                </tr>
-                <tr>
-                    <th scope="row">6</th>
-                    <td>123456789</td>
-                    <td>14/12/2022</td>
-                    <td>Vé cổng</td>
-                    <td>Cổng 1</td>
-                    <td>Chưa đối soát</td>
-                </tr>
-                <tr>
-                    <th scope="row">7</th>
-                    <td>123456789</td>
-                    <td>14/12/2022</td>
-                    <td>Vé cổng</td>
-                    <td>Cổng 1</td>
-                    <td>Chưa đối soát</td>
-                </tr>
-                <tr>
-                    <th scope="row">8</th>
-                    <td>123456789</td>
-                    <td>14/12/2022</td>
-                    <td>Vé cổng</td>
-                    <td>Cổng 1</td>
-                    <td>Chưa đối soát</td>
-                </tr>
-            </tbody>
+            {
+                ticketList?.map((item, index) => (
+                    <tbody key={index}>
+                        <tr>
+                            <th scope="row">1</th>
+                            <td>{item.ticketNumber}</td>
+                            <td>{item.inDate }</td>
+                            <td>{item.type }</td>
+                            <td>{ item.port}</td>
+                            <td style={{ color: 'red' }}>Chưa đối soát</td>
+                        </tr>
+
+                    </tbody>
+                ))
+
+
+            }
+
+
         </table>
     );
 };

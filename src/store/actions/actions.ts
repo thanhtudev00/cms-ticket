@@ -8,7 +8,7 @@ import {
     Ticket,
 } from '../contant/TicketType';
 
-interface ShowTicketAction{
+interface ShowTicketAction {
     type: typeof SHOW_TICKET;
     payload: Ticket[];
 }

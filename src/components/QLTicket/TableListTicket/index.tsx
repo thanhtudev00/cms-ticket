@@ -1,7 +1,32 @@
 
+import firebase, { test } from "../../../api/Firebase";
+import {
+    collection,
+    getDocs,
+    doc,
+} from 'firebase/firestore';
+import { Ticket } from "../../../store/contant/TicketType";
+import { useEffect, useState } from "react";
 
+const TableListTicket = (props: any) => {
 
-const TableListTicket = () => {
+    const [ticketQL, setTicketQL] = useState<Ticket[] | null>(null);
+
+    useEffect(() => {
+        const getTicketQL = async () => {
+            await test.get().then(
+                (snapshot: firebase.firestore.QuerySnapshot<firebase.firestore.DocumentData>) => {
+                    const data = snapshot.docs.map((doc) => ({ ...doc.data() }));
+                    const ticketsQL = data as Ticket[];
+                    setTicketQL(ticketsQL);
+                }
+            );
+        };
+        getTicketQL();
+    }, []);
+    if (ticketQL) {
+        console.log(ticketQL.map(item => item));
+    }
 
     return (
         <table className="table table-striped">
@@ -16,71 +41,22 @@ const TableListTicket = () => {
                     <th scope="col">Cổng check-in</th>
                 </tr>
             </thead>
-            <tbody>
-                <tr>
-                    <th scope="row">1</th>
-                    <td>AHGSFH</td>
-                    <td>123456789</td>
-                    <td>Đã sử dụng</td>
-                    <td>14/12/2022</td>
-                    <td>10/12/2022</td>
-                    <td>Cổng 1</td>
-                </tr>
-                <tr>
-                    <th scope="row">2</th>
-                    <td>AHGSFH</td>
-                    <td>123456789</td>
-                    <td>Đã sử dụng</td>
-                    <td>14/12/2022</td>
-                    <td>10/12/2022</td>
-                    <td>Cổng 1</td>
-                </tr>
-                <tr>
-                    <th scope="row">3</th>
-                    <td>AHGSFH</td>
-                    <td>123456789</td>
-                    <td>Đã sử dụng</td>
-                    <td>14/12/2022</td>
-                    <td>10/12/2022</td>
-                    <td>Cổng 1</td>
-                </tr>
-                <tr>
-                    <th scope="row">4</th>
-                    <td>AHGSFH</td>
-                    <td>123456789</td>
-                    <td>Đã sử dụng</td>
-                    <td>14/12/2022</td>
-                    <td>10/12/2022</td>
-                    <td>Cổng 1</td>
-                </tr>
-                <tr>
-                    <th scope="row">5</th>
-                    <td>AHGSFH</td>
-                    <td>123456789</td>
-                    <td>Đã sử dụng</td>
-                    <td>14/12/2022</td>
-                    <td>10/12/2022</td>
-                    <td>Cổng 1</td>
-                </tr>
-                <tr>
-                    <th scope="row">6</th>
-                    <td>AHGSFH</td>
-                    <td>123456789</td>
-                    <td>Đã sử dụng</td>
-                    <td>14/12/2022</td>
-                    <td>10/12/2022</td>
-                    <td>Cổng 1</td>
-                </tr>
-                <tr>
-                    <th scope="row">7</th>
-                    <td>AHGSFH</td>
-                    <td>123456789</td>
-                    <td>Đã sử dụng</td>
-                    <td>14/12/2022</td>
-                    <td>10/12/2022</td>
-                    <td>Cổng 1</td>
-                </tr>
-            </tbody>
+            {
+                ticketQL?.map((item, index) => (
+                    <tbody key={index}>
+                        <tr>
+                            <th scope="row">{index}</th>
+                            <td>{item.code}</td>
+                            <td>{item.ticketNumber}</td>
+                            <td style={{color: 'red'}}>{item.status}</td>
+                            <td>{item.inDate}</td>
+                            <td>{item.outDate}</td>
+                            <td>{item.port}</td>
+                        </tr>
+                    </tbody>
+                ))
+            }
+
         </table>
     );
 };

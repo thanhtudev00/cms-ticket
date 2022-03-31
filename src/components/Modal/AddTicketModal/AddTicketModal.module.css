@@ -1,0 +1,200 @@
+.addBox {
+    position: absolute;
+    z-index: 100;
+    width: 758px;
+    height: 628px;
+
+    border-radius: 16px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.25);
+    background-color: white;
+    transition: 0.2s;
+
+    padding: 24px 30px;
+    top: 20px;
+    left: 25%;
+}
+.addBox h1 {
+    font-style: normal;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 30px;
+
+    color: #1e0d03;
+    text-align: center;
+}
+.addBox div {
+    margin-top: 15px;
+}
+
+.nameTicket {
+    width: 100%;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+}
+.nameTicket label {
+    font-style: normal;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 26px;
+
+    color: #1e0d03;
+    opacity: 0.7;
+}
+.nameTicket input {
+    color: #a5a8b1;
+    opacity: 0.7;
+    width: 367px;
+    height: 40px;
+
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 20px;
+
+    border: 1px solid #a5a8b1;
+    box-sizing: border-box;
+    border-radius: 8px;
+}
+.nameTicket input:focus {
+    outline: none;
+    color: #1e0d03;
+}
+
+.dateCB {
+    width: 100%;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: left;
+    align-items: flex-start;
+}
+.dateCB div {
+    display: flex;
+    flex-direction: column;
+    justify-content: left;
+    align-items: flex-start;
+}
+.dateCB div div {
+    display: flex;
+    flex-direction: row;
+}
+.dateCB div div input {
+    border: 1px solid #a5a8b1;
+    box-sizing: border-box;
+    border-radius: 8px;
+    color: #a5a8b1;
+
+    opacity: 0.7;
+    height: 40px;
+
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 20px;
+}
+.dateCB div div input:focus {
+    outline: none;
+    color: #1e0d03;
+}
+
+.useTicket {
+    width: 100%;
+
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+}
+.useTicket p {
+    font-style: normal;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 26px;
+
+    color: #1e0d03;
+}
+.useTicket div {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+}
+.useTicket div input {
+    height: 40px;
+    background-color: #f1f4f8;
+    border-radius: 8px;
+    color: #a5a8b1;
+    border: none;
+
+    opacity: 0.7;
+
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 20px;
+    margin: 0 5px;
+}
+.useTicket div input:focus {
+    outline: none;
+    color: #1e0d03;
+}
+
+.status {
+    width: 100%;
+}
+.status p {
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 20px;
+
+    color: #1e0d03;
+    opacity: 0.7;
+}
+.status select {
+    height: 40px;
+    border-radius: 8px;
+    border: 1px solid #a5a8b1;
+    box-sizing: border-box;
+}
+
+.note {
+    font-style: italic;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 15px;
+
+    color: #1e0d03;
+    opacity: 0.4;
+}
+
+.btn {
+    width: 100%;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+.btn button {
+    height: 48px;
+    border: 1px solid #ff993c;
+    box-sizing: border-box;
+    border-radius: 8px;
+
+    padding: 0 24px;
+    width: 160px;
+    background-color: white;
+
+    font-style: normal;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 26px;
+}
+.btn button:focus{
+    outline: none;
+}
+

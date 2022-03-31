@@ -1,18 +1,18 @@
-import firebase from 'firebase/compat/app';
-import 'firebase/compat/firestore';
 
+import firebase from "firebase/compat/app";
+import "firebase/compat/firestore";
 
-firebase.initializeApp ( {
-    apiKey: "AIzaSyChe6gi-XNSoeccWc6I5aCl10trOCtOcqg",
-    authDomain: "cms-ticket-sale-d4ae7.firebaseapp.com",
-    projectId: "cms-ticket-sale-d4ae7",
-    storageBucket: "cms-ticket-sale-d4ae7.appspot.com",
-    messagingSenderId: "1058004029176",
-    appId: "1:1058004029176:web:eb3837c0e6178dd78b750d",
-    measurementId: "G-EE7526PZNW"
-});
+firebase.initializeApp({
+    apiKey: "AIzaSyAXxdok0IxP4t49tJUxjZUUh0R1alolppE",
+    authDomain: "ticket-sale-8e883.firebaseapp.com",
+    projectId: "ticket-sale-8e883",
+    storageBucket: "ticket-sale-8e883.appspot.com",
+    messagingSenderId: "1042785388572",
+    appId: "1:1042785388572:web:ca2992f12a151a864337d9"
+})
 
-const storeTickets = firebase.firestore().collection('tickets');
-
-export { storeTickets };
+// Initialize Firebase
+const test = firebase.firestore().collection('tickets');
+const test2 = firebase.firestore().collection('comboTickets');
+export { test, test2 };
 export default firebase;
